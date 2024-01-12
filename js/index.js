@@ -1,6 +1,3 @@
-
-
-
 let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 let passRegex = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$/;
 let nameRegex = /^[a-z\s*]+$/;
@@ -44,7 +41,7 @@ function signUp (){
             if (emailRegex.test(signUpInfo.signUpEmail) == true && passRegex.test(signUpInfo.signUpPassword) == true && nameRegex.test(signUpInfo.signUpName) == true && signUpInfo.signUpRepassword===signUpInfo.signUpPassword)
             {
                 valText.innerHTML ='';
-                window.location = 'file:///C:/front%20end/ASSIGNMENTS/ASSIGNMENT%2010/sign-in.html';
+                window.location = 'file:///C:/front%20end/ASSIGNMENTS/ASSIGNMENT%2010/index.html';
                 users.push(signUpInfo);
         
                 localStorage.setItem('usersArray' , JSON.stringify(users));
@@ -106,6 +103,6 @@ function signin(){
 }
 
 function logOut(){
-    window.location = 'sign-in.html';
+    window.location = 'index.html';
 }
 
